@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int lps, fps, n;    // 지역 예선 합격 확률, 지역 본선 합격 확률, 전국 대회 진출한 학생 수
+
+    scanf("%d", &lps);
+    scanf("%d", &fps);
+    scanf("%d", &n);
+    printf("%d", (int)((n * 10000) / (lps * fps)));
+
+    return 0;
+}
