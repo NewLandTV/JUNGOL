@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-#define Min(a, b) ((a) < (b) ? (a) : (b))
-
 int main(void)
 {
     int i;
@@ -12,15 +10,16 @@ int main(void)
     scanf("%d", &n);
     scanf("%s", s);
 
-    for (i = 0; i < n; i++)
+    for (i = 1; i < n; i++)
     {
-        if (s[i] == 'X')
+        if (s[i - 1] != s[i])
         {
             x++;
+            i++;
         }
     }
 
-    printf("%d", Min(x, n - x));
+    printf("%d", x);
 
     return 0;
 }
